@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="diagramContainer">
+        <div id="item_left"  class="item"></div>
+        <div id="item_right" class="item" style="left:150px;"></div>
+    </div>
+
+    <p><a href="http://www.freedevelopertutorials.com/jsplumb-tutorial/introduction/">Visit the full jsPlumb-Tutorial</a> to learn it and see many more interesting examples.</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.5.8/js/jsplumb.min.js"></script>
+    <script>
+        jsPlumb.ready(function() {
+            jsPlumb.connect({
+                source:"item_left",
+                target:"item_right",
+                endpoint:"Rectangle"
+            });
+            
+            jsPlumb.draggable("item_left");
+            jsPlumb.draggable("item_right");
+        });
+    </script> 
+
+</body>
+</html>
