@@ -32,7 +32,7 @@
 
 /* line_container used to contain 2 blocks on same line: */
 .line_container  {  text-align:center;  }
-.block1, .block2 {  display:inline;     }
+.block1, .block2, .blockN {  display:inline;     }
 
 .title-rounded {
     border-radius: 25px;
