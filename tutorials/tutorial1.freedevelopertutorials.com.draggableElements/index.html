@@ -14,19 +14,24 @@
 
     <body data-demo-id="tutorial">
 
+        <!-- info about nested boxes:
+        https://stackoverflow.com/questions/18381670/how-to-nest-css-boxes-with-relative-positioning-and-absolute-positioning#comment26995236_18381724
+        -->
+
         <div id="diagramContainer">
-            <div id="item_left"  class="green-rounded item">
+            <div id="item_left"  class="type1-rounded item">
                 <div class="title-rounded">
-                    <b>Green</b> box: <i>"TITLE"</i>
+                    <b>Type1</b> box: <i>"TITLE"</i>
                 </div>
                 line1
                 <hr/>
                 line2
             </div>
 
-            <div id="item_right" class="cyan-rounded item" style="left:150px;">
-                <div class="title-rounded">
-                    <b>Cyan</b> box: <i>"TITLE"</i>
+            <div id="item_right" class="type2-rounded item" style="left:150px;">
+                <div class="line_container">
+                    <div class="block1 title-left-rounded"> <b>Type2</b> box: </div>
+                    <div class="block2 title-right-rounded"> <i>"TITLE"</i> </div>
                 </div>
                 line1
                 <br/>
