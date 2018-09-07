@@ -12,6 +12,19 @@ var common = {
 
 };
 
+var commonDotted = {
+    connector: ["Straight"],
+    anchor: ["Left", "Right"],
+
+    endpoint:"Dot",
+
+    paintStyle:{ stroke:"blue", strokeWidth:3, dashstyle: "2 4", },
+    endpointStyle:{ fill:"lightgray", outlineStroke:"darkgray", outlineWidth:10 },
+
+    overlays:[ ["Arrow" , { width:12, length:12, location:0.67 }] ],
+
+};
+
 const start = () => {
     jsPlumb.connect({
         source:"item1_l",
@@ -29,6 +42,13 @@ const start = () => {
     jsPlumb.draggable("item2_l", {containment:true});
     jsPlumb.draggable("item2_r", {containment:true});
     
+    // verify that we can connect between containers:
+    jsPlumb.connect({
+        source:"item1_l",
+        target:"item2_l",
+        endpoint:"Rectangle",        
+        },
+        commonDotted,);
 };
 
 
